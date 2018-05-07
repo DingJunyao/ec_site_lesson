@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>淘书网</title>
+    <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/index.css">
   </head>
   <body>
@@ -16,7 +17,7 @@
         </div>
         <div class="search">
           <form class="" action="index.html" method="post">
-            <input type="text" name="search-book" value="">
+            <input type="search" name="search-book" value="">
             <button type="button" name="search-button">查询</button>
           </form>
         </div>
@@ -110,16 +111,18 @@
         <aside>
           <div class="login">
             <h1>用户登陆</h1>
-            <label for="username">用户名：
-              <input type="text" name="username" value="">
-            </label>
-            <label for="password">密码：
-              <input type="password" name="password" value="">
-            </label>
-            <div class="login-button">
-              <button>登陆</button>
-              <button>注册</button>
-            </div>
+            <form action="">
+              <label for="username">用户名：
+                <input type="text" name="username" value="">
+              </label>
+              <label for="password">密码：
+                <input type="password" name="password" value="">
+              </label>
+              <div class="login-button">
+                <button>登陆</button>
+                <button>注册</button>
+              </div>
+            </form>
           </div>
           <div class="news">
             <div class="news-header">
