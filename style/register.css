@@ -1,0 +1,6 @@
+.header-img {
+  box-shadow: 0 10px 10px 0 gray;
+}
+header > hr {
+  color: red;
+}

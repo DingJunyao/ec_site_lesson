@@ -1,9 +1,12 @@
-html{
+html {
   background-color: #e4e5f9;
   font-family: "微软雅黑", SimHei, sans-serif;
 }
 
-.container{
+.container {
   width: 1024px;
   margin: 0 auto;
+}
+.header-img > img {
+  width: 100%;
 }
