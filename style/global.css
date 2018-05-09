@@ -4,9 +4,10 @@ html {
 }
 
 .container {
-  width: 1024px;
+  width: 1366px;
   margin: 0 auto;
 }
 .header-img > img {
   width: 100%;
+  border-bottom: 4px solid #D2D0D1;
 }

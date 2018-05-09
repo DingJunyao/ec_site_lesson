@@ -1,3 +1,65 @@
-.logo{
-
+.header-title {
+  display:flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-space-around;
+  margin: 20px 0;
+}
+.logo {
+  margin: 0 auto;
+  color: red;
+  font-family: "华文新魏",sans-serif;
+  font-size: 2rem;
+}
+.search {
+  margin: 0 auto;
+}
+.search-form > input {
+  width: 500px;
+  height:2rem;
+  border: 2px solid #8997B2;
+}
+.cart {
+  margin: 0 auto;
+}
+.func-area {
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-space-between;
+}
+nav {
+  flex: 0 0 200px;
+  border-top: 1px solid white;
+}
+nav > h1 {
+  color: #22842C;
+  font-weight: normal;
+  margin: 8px auto;
+}
+nav > ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+nav > ul > li {
+  margin: 10px 0;
+}
+.book-list {
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.book {
+  flex: 0 1 163px;
+  margin: 20px;
+}
+.book > img {
+  height: 180px;
 }
