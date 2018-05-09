@@ -46,6 +46,9 @@ nav > ul {
 nav > ul > li {
   margin: 10px 0;
 }
+.new-book {
+  flex: 0 0 786px;
+}
 .book-list {
   display: flex;
   -webkit-flex-direction: row;
@@ -56,10 +59,16 @@ nav > ul > li {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.new-book-title > img {
+  width: 100%;
+}
 .book {
   flex: 0 1 163px;
-  margin: 20px;
+  margin: 10px;
 }
 .book > img {
   height: 180px;
+}
+.book-title {
+
 }
