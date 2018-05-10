@@ -4,8 +4,8 @@ html {
 }
 
 .container {
-  width: 1366px;
-  margin: 0 auto;
+  width: 1333px;
+  /*margin: 0 auto;*/
 }
 .header-img > img {
   width: 100%;

@@ -3,25 +3,45 @@
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  justify-content: flex-space-around;
-  margin: 20px 0;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 26px 0;
 }
 .logo {
-  margin: 0 auto;
-  color: red;
+  margin:  2px auto auto 52px;
+  color: #f41e1c;
   font-family: "华文新魏",sans-serif;
   font-size: 2rem;
 }
 .search {
-  margin: 0 auto;
+  margin: 0 auto 0 82px;
 }
 .search-form > input {
-  width: 500px;
-  height:2rem;
+  width: 506px;
+  height: 38px;
   border: 2px solid #8997B2;
 }
+.search-form > button {
+  background-color: #fd0304;
+  height: 35px;
+  margin: -2px auto auto -5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  width: 61px;
+  line-height: 1.2rem;
+}
 .cart {
-  margin: 0 auto;
+  margin: 0 72px 4px auto;
+}
+.cart > button {
+  height: 30px;
+  width: 150px;
+  color: #a92b36;
+  border: none;
+  background-color: white;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
 }
 .func-area {
   display: flex;
