@@ -21,21 +21,27 @@
         </div>
         <form action="">
           <label for="phone">手机号码
-            <input type="tel" name="phone" required>
+            <input type="tel" name="phone" pattern="[0-9]{11}" required>
           </label>
-          <p>手机号可用于登录、找回密码、接收订通知等服务</p>
+            <p class="desp">手机号可用于登录、找回密码、接收订通知等服务</p>
           <label for="password">登录密码
-            <input type="password" name="password" required>
+            <input type="password" name="password" pattern="[A-Za-z0-9]{6,12}" required>
           </label>
-          <p>包含大写字母、小写字母和数字的6~12个字符</p>
+          <p class="desp">包含大写字母、小写字母和数字的6~12个字符</p>
           <label for="confirm">确认密码
-            <input type="password" name="confirm" required>
+            <input type="password" name="confirm" pattern="[A-Za-z0-9]{6,12}" required>
           </label>
-          <input type="checkbox" name="accept" value="true" checked>我已阅读同意《淘书网交易条款》和《淘书网社区条款》
-          <buttton class="reg-button">立即注册</buttton>
+          <p>
+            <input type="checkbox" name="accept" value="true" checked><span class="license-checkbox">我已阅读同意《淘书网交易条款》和《淘书网社区条款》</span>
+          </p>
+          <div class="reg-button">
+            <button>立即注册</button>
+          </div>
         </form>
       </div>
-      <hr>
+    </div>
+    <hr class="footer-hr">
+    <div class="container">
       <footer>
         <ul class="footer-link-ul">
           <li><a href="#">关于我们</a></li>
