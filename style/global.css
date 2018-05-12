@@ -2,12 +2,42 @@ html {
   background-color: #e4e5f9;
   font-family: "微软雅黑", SimHei, sans-serif;
 }
-
 .container {
   width: 1333px;
-  /*margin: 0 auto;*/
+  margin: 0 auto;
+}
+a:link {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:visited {
+  color: inherit;
+  text-decoration: inherit;
 }
 .header-img > img {
   width: 100%;
   border-bottom: 4px solid #D2D0D1;
+}
+footer {
+  background-color: #d2d2d2;
+  text-align: center;
+  font-size: 0.83rem;
+  font-weight: bold;
+}
+.footer-link-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 22px 0;
+}
+.footer-link-ul > li {
+  display: inline;
+  border-right: 2px solid black;
+  padding: 0 7px;
+}
+.footer-link-ul > :last-child {
+  border-right: none;
+}
+footer > p {
+  margin: 0;
+  padding-bottom: 22px;
 }

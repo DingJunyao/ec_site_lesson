@@ -37,7 +37,7 @@
 .cart > button {
   height: 30px;
   width: 150px;
-  color: #a92b36;
+  color: #eb1419;
   border: none;
   background-color: white;
   font-size: 1.1rem;
@@ -103,7 +103,7 @@ nav > ul > li {
 .price {
   margin: 1px 0;
   font-size: 0.84rem;
-  color: #a22f36;
+  color: #eb1419;
   font-weight: bold;
 }
 aside {
