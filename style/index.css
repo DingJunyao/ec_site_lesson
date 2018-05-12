@@ -60,12 +60,12 @@ nav > h1 {
   margin: 15px auto 9px auto;
 }
 nav > ul {
-  margin-top: -2px;
+  margin-top: -5px;
   list-style-type: none;
   padding-left: 20px;
 }
 nav > ul > li {
-  margin: 11px 0;
+  padding: 5.5px 0;
 }
 .new-book {
   flex: 0 0 793px;
@@ -110,4 +110,59 @@ aside {
   flex: 0 1 298px;
   margin-left: 42px;
   border-top: 1px solid white;
+}
+.login {
+  padding-bottom: 5px;
+}
+.login > h1 {
+  color: #22842C;
+  font-weight: normal;
+  margin: 15px auto 9px auto;
+}
+.login > form > p {
+  display: flex;
+  width: 100%;
+  margin: 9px 0;
+  font-size: 1.1rem;
+  justify-content: space-between;
+}
+
+.login > form > p > input {
+  margin: 4px 45px 0 0;
+  height: 15px;
+}
+.login-button > button {
+  margin: 0 20px;
+  height: 30px;
+  width: 60px;
+  font-size: 1rem;
+}
+.news-header {
+  padding-bottom: 4px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+}
+.news-header > h2 {
+  margin: 7px 0;
+  line-height: 22px;
+  padding-right: 10px;
+  font-weight: normal;
+  font-size: 1.2rem;
+  border-right: 2px solid #878787;
+  height: 22px;
+}
+.news-header > p {
+  margin: 4px 8px 0 auto;
+  font-size: 1.2rem;
+}
+.news-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 2px 0;
+}
+.news-list > li {
+  font-size: 0.91rem;
+  padding: 6.4px 0;
 }
