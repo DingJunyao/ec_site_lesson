@@ -119,7 +119,7 @@ aside {
   font-weight: normal;
   margin: 15px auto 9px auto;
 }
-.login > form > p {
+.login > div > p {
   display: flex;
   width: 100%;
   margin: 9px 0;
@@ -127,7 +127,7 @@ aside {
   justify-content: space-between;
 }
 
-.login > form > p > input {
+.login > div > p > input {
   margin: 4px 45px 0 0;
   height: 15px;
 }
