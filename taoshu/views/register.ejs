@@ -21,19 +21,20 @@
         </div>
         <form action="/api/register" method="post">
           <label for="phone">手机号码
-            <input type="tel" name="phone" pattern="[0-9]{11}" required>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{11}" required>
           </label>
             <p class="desp">手机号可用于登录、找回密码、接收订通知等服务</p>
           <label for="password">登录密码
-            <input type="password" name="password" pattern="[A-Za-z0-9]{6,12}" required>
+            <input type="password" name="password" id="password" pattern="[A-Za-z0-9]{6,12}" required>
           </label>
           <p class="desp">包含大写字母、小写字母和数字的6~12个字符</p>
           <label for="confirm">确认密码
-            <input type="password" name="confirm" pattern="[A-Za-z0-9]{6,12}" required>
+            <input type="password" name="confirm" id="confirm" pattern="[A-Za-z0-9]{6,12}" required>
           </label>
           <p>
-            <input type="checkbox" name="accept" value="true" checked><span class="license-checkbox">我已阅读同意《淘书网交易条款》和《淘书网社区条款》</span>
+            <input type="checkbox" name="accept" id="accept" value="true" checked><span class="license-checkbox">我已阅读同意《淘书网交易条款》和《淘书网社区条款》</span>
           </p>
+          <p id='error'>您必须同意淘书网服务条款后，才能提交注册。</p>
           <div class="reg-button">
             <button>立即注册</button>
           </div>
@@ -54,4 +55,5 @@
       </footer>
     </div>
   </body>
+  <script src="/js/register.js"></script>
 </html>

@@ -105,6 +105,7 @@
           </div>
         </div>
         <aside>
+          <% if(user == ''){ %>
           <div class="login">
             <h1>用户登陆</h1>
             <div>
@@ -123,6 +124,9 @@
               </div>
             </div>
           </div>
+          <% } else { %>
+            <h1>hi, <%= user %><br>欢迎回淘书网！</h1>
+          <% } %>
           <div class="news">
             <div class="news-header">
               <h2>公告</h2>

@@ -12,15 +12,12 @@ router.post('/register', function(req, res, next) {
   });
   var insertUser = connection.query('INSERT INTO tbluser SET ?', postInfo, function(err, result) {
     if(err) {
-      return console.error('Insert error: '+ err.stack);
+      console.error('Insert error: '+ err.stack);
+      res.end('Insert error: '+ err.stack);
     }
-    return 0;
+    res.redirect('index', { user: req.body.phone });
   });
-  if(insertUser() == 0) {
-    res.redirect('/', { user: req.body.phone });
-  } else {
-    res.end("<h1>注册失败</h1>");
-  }
+  console.log(insertUser)
 });
 
 module.exports = router;
