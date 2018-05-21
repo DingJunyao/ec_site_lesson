@@ -29,7 +29,7 @@ document.getElementById("register").onclick = function() {
         if(e.target.readyState === XMLHttpRequest.DONE && e.target.status === 200) {
             switch (httpRequest.responseText) {
                 case "0":
-                    setCookie("taoshu_user", sha256(document.getElementById('phone').value+";"+document.getElementById('password').value), 3600)
+                    setCookie("taoshu_user", SHA256(document.getElementById('phone').value+";"+document.getElementById('password').value), 3600)
                     window.location.assign("/")
                     break;
                 case "1":

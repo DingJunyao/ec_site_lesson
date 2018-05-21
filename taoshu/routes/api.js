@@ -1,13 +1,8 @@
 var express = require('express');
-var mysql = require('mysql');
+var pool = require('./mysql_pool')
 var router = express.Router();
 
-var pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'taoshu'
-});
+
 
 router.post('/register', function(req, res, next) {
   var postInfo = {fldName: req.body.phone, fldPassword: req.body.password}
