@@ -1,5 +1,5 @@
 var express = require('express');
-var mysql = require('mysql')
+var mysql = require('mysql');
 var router = express.Router();
 
 router.post('/register', function(req, res, next) {
@@ -15,9 +15,12 @@ router.post('/register', function(req, res, next) {
       console.error('Insert error: '+ err.stack);
       res.end('Insert error: '+ err.stack);
     }
-    res.redirect('index', { user: req.body.phone });
+    res.redirect('/');
   });
-  console.log(insertUser)
 });
+
+route.post('/login', function (req, res, next) {
+
+})
 
 module.exports = router;
