@@ -7,12 +7,12 @@ function setCookie(c_name,value,expiredays)
 }
 
 document.getElementById("accept").onclick = function() {
-  if(document.getElementById("accept").checked !== true) {
-    document.getElementById("error").style.display = 'block';
-    document.getElementById("register").disabled = false;
-  } else {
+  if(document.getElementById("accept").checked == true) {
     document.getElementById("error").style.display = 'none';
     document.getElementById("register").disabled = true;
+  } else {
+    document.getElementById("error").style.display = 'block';
+    document.getElementById("register").disabled = false;
   }
 };
 document.getElementById("register").onclick = function() {
@@ -25,7 +25,6 @@ document.getElementById("register").onclick = function() {
             switch (httpRequest.responseText) {
                 case "0":
                     //success
-
                     break;
                 case "1":
                     alert("该用户已被注册！");
