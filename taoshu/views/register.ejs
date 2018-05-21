@@ -19,7 +19,7 @@
           <h1>新用户注册</h1>
           <a href="/">淘书网首页</a>
         </div>
-        <form action="/api/register" method="post">
+        <form action="">
           <label for="phone">手机号码
             <input type="tel" name="phone" id="phone" pattern="[0-9]{11}" required>
           </label>
@@ -36,7 +36,7 @@
           </p>
           <div id='error'>您必须同意淘书网服务条款后，才能提交注册。</div>
           <div class="reg-button">
-            <button id="register">立即注册</button>
+            <button id="register" onclick="userRegister()">立即注册</button>
           </div>
         </form>
       </div>
@@ -55,5 +55,6 @@
       </footer>
     </div>
   </body>
+  <script src="/js/sha256.js"></script>
   <script src="/js/register.js"></script>
 </html>

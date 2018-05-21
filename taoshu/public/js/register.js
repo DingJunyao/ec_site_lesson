@@ -6,25 +6,31 @@ function setCookie(c_name,value,expiredays)
         ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
 }
 
-document.getElementById("accept").onclick = function() {
+document.querySelector('form').addEventListener('submit',function(e){
+    e.preventDefault();
+},false);
+
+document.getElementById("accept").onchange = function() {
   if(document.getElementById("accept").checked == true) {
     document.getElementById("error").style.display = 'none';
-    document.getElementById("register").disabled = true;
+    document.querySelector('#register').removeAttribute('disabled');
   } else {
     document.getElementById("error").style.display = 'block';
-    document.getElementById("register").disabled = false;
+    document.querySelector('#register').setAttribute('disabled',true);
   }
 };
 document.getElementById("register").onclick = function() {
     if(document.getElementById("password").value !== document.getElementById("confirm").value){
         alert('两次密码输入不一致！')
+        return;
     }
     var httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function (e) {
         if(e.target.readyState === XMLHttpRequest.DONE && e.target.status === 200) {
             switch (httpRequest.responseText) {
                 case "0":
-                    //success
+                    setCookie("taoshu_user", sha256(document.getElementById('phone').value+";"+document.getElementById('password').value), 3600)
+                    window.location.assign("/")
                     break;
                 case "1":
                     alert("该用户已被注册！");

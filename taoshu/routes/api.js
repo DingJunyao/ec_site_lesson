@@ -9,23 +9,6 @@ var pool = mysql.createPool({
   database: 'taoshu'
 });
 
-// router.post('/register', function(req, res, next) {
-//   var postInfo = {fldName: req.body.phone, fldPassword: req.body.password}
-//   var connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'root',
-//     database: 'taoshu'
-//   });
-//   var insertUser = connection.query('INSERT INTO tbluser SET ?', postInfo, function(err, result) {
-//     if(err) {
-//       console.error('Insert error: '+ err.stack);
-//       res.end('Insert error: '+ err.stack);
-//     }
-//     res.redirect('/');
-//   });
-// });
-
 router.post('/register', function(req, res, next) {
   var postInfo = {fldName: req.body.phone, fldPassword: req.body.password}
   pool.getConnection(function(err, connection){
@@ -41,7 +24,17 @@ router.post('/register', function(req, res, next) {
 });
 
 router.post('/login', function (req, res, next) {
-
-})
+  var postInfo = {fldName: req.body.phone, fldPassword: req.body.password}
+  pool.getConnection(function(err, connection){
+    connection.query('SELECT * FROM tbluser WHERE ?', postInfo, function(err, rows) {
+      if(err){
+         res.end("1");
+      } else {
+         res.end("0");
+      }
+      connection.release();
+    });
+  });
+});
 
 module.exports = router;
