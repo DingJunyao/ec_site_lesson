@@ -3,32 +3,6 @@ var pool = require('./mysql_pool');
 var crypto = require('crypto');
 var router = express.Router();
 
-function searchToken(user, token) {
-  pool.getConnection(function(err, connection){
-    connection.query('SELECT fldPassword FROM tbluser WHERE fldName = ?', user, function(err, rows) {
-      if(err){
-        return 1;
-      } else {
-        if(rows[0] !== undefined) {
-          var hash_pw = crypto.createHash('sha256');
-          hash_pw.update(user);
-          hash_pw.update(';');
-          hash_pw.update(rows[0].fldPassword);
-          var hash_pw_result = hash_pw.digest('hex');
-          if(token == hash_pw_result) {
-            return 0;
-          } else {
-            return -1;
-          }
-        } else {
-          return -2;
-        }
-      }
-      connection.release();
-    });
-  });
-}
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   pool.getConnection(function(err, connection){
