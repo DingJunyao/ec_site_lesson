@@ -1,3 +1,7 @@
+document.getElementById("logo").onclick = function() {
+  window.location.assign("/")
+}
+
 document.getElementById("register").onclick = function() {
   window.location.assign("/register")
 }
