@@ -3,7 +3,7 @@ var pool = require('./mysql_pool')
 var router = express.Router();
 
 router.post('/register', function(req, res, next) {
-  var postInfo = {fldName: req.body.phone, fldPassword: req.body.password}
+  var postInfo = {fldName: req.body.phone, fldPassword: req.body.password};
   pool.getConnection(function(err, connection){
     connection.query('INSERT INTO tbluser SET ?', postInfo, function(err, rows) {
       if(err){

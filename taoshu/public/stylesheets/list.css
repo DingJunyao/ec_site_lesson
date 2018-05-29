@@ -1,0 +1,61 @@
+.func-area {
+  border-top: 1px solid white;
+  flex-direction: column;
+}
+.list-content {
+  margin: 20px 40px;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+
+}
+.content-img {
+  flex: 0 0 315px;
+  height: 210px;
+}
+
+.content-img > img {
+  width: 100%;
+  height: 100%;
+}
+.content-detail {
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.detail-text > h1 {
+  margin: 4px 0;
+  font-size: 1rem;
+  font-weight: normal;
+  color: blue;
+}
+.price {
+  margin: 8px 0 0 0;
+  font-size: 1.1rem;
+  color: red;
+}
+.author {
+  margin: 0;
+}
+.desp {
+  margin: 0;
+}
+.func-button > button {
+  height: 1.5rem;
+  margin-right: 15px;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-size: 0.98rem;
+  border-radius: 6px;
+  border: none;
+}
+.add-to-cart, .buy {
+  background-color: red;
+  color: white;
+}
+.mark {
+  background-color: #ffb6c1;
+  color: red;
+}
