@@ -35,5 +35,5 @@ document.getElementById("register").onclick = function() {
     };
     httpRequest.open("POST", "/api/register", true)
     httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    httpRequest.send("phone="+document.getElementById('phone').value+"&password="+document.getElementById('password').value)
+    httpRequest.send("phone="+document.getElementById('phone').value+"&password="+document.getElementById('password').value);
 };

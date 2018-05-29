@@ -22,5 +22,5 @@ document.getElementById("login").onclick = function() {
   };
   httpRequest.open("POST", "/api/login", true)
   httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  httpRequest.send("username="+document.getElementById('username').value+"&password="+document.getElementById('password').value)
+  httpRequest.send("username="+document.getElementById('username').value+"&password="+document.getElementById('password').value);
 }
