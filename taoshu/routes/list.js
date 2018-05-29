@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('list', {search: '', books: ''});
 });
 
-router.get('/:type', function(req, res, next) {
+router.get('/type/:type', function(req, res, next) {
   pool.getConnection(function(err, connection){
     connection.query('SELECT * FROM tblbook WHERE fldType = ?', req.params.type, function(err, rows) {
       if(err){
