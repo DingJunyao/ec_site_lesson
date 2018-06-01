@@ -36,7 +36,7 @@
                 <div class="detail-text">
                   <h1><%= book.fldBName %></h1>
                   <p class="price">￥<%= book.fldPrice %></p>
-                  <p class="author">[<%= book.fldAuthorCountry %>] <%= book.fldAuthor %> /<%= book.fldDate %>/ <%= book.fldPress %></p>
+                  <p class="author">[<%= book.fldAuthorCountry %>] <a href="/list/author/<%= book.fldAuthor %>"><%= book.fldAuthor %></a> /<%= book.fldDate %>/ <a href="/list/press/<%= book.fldPress %>"><%= book.fldPress %></a></p>
                   <p class="desp"><%= book.fldDescription %></p>
                 </div>
                 <div class="func-button">

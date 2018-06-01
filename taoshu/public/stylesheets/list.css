@@ -25,10 +25,13 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.detail-text > h1 {
+.detail-text > h1  {
   margin: 4px 0;
   font-size: 1rem;
   font-weight: normal;
+  color: blue;
+}
+.detail-text a {
   color: blue;
 }
 .price {
