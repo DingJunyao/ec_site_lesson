@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   pool.getConnection(function(err, connection){
     connection.query('SELECT fldPassword FROM tbluser WHERE fldName = ?', req.cookies.taoshu_user, function(err, rows) {
       if(err){
-        res.render('index', { user: '' });
+        res.render('index', { search: '', user: '' });
       } else {
         if(rows[0] !== undefined) {
           var hash_pw = crypto.createHash('sha256');
@@ -17,12 +17,12 @@ router.get('/', function(req, res, next) {
           hash_pw.update(rows[0].fldPassword);
           var hash_pw_result = hash_pw.digest('hex');
           if(req.cookies.taoshu_token == hash_pw_result) {
-            res.render('index', { user: req.cookies.taoshu_user });
+            res.render('index', { search: '', user: req.cookies.taoshu_user });
           } else {
-            res.render('index', { user: '' });
+            res.render('index', { search: '', user: '' });
           }
         } else {
-          res.render('index', { user: '' });
+          res.render('index', { search: '', user: '' });
         }
       }
       connection.release();

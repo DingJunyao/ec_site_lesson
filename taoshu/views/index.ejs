@@ -8,25 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <div class="header-img">
-          <img src="/images/book.jpg" alt="首页头图">
-        </div>
-        <div class="header-title">
-          <div class="logo" id="logo">
-            淘书网
-          </div>
-          <div class="search">
-            <form class="search-form" action="index.html" method="post">
-              <input type="search" name="search-book" value="">
-              <button type="button" name="search-button">查询</button>
-            </form>
-          </div>
-          <div class="cart">
-            <button type="button" name="my-cart">我的购物车</button>
-          </div>
-        </div>
-      </header>
+      <%- include("./header.ejs")%>
       <div class="func-area">
         <nav>
           <h1>图书分类</h1>
@@ -145,23 +127,15 @@
           </div>
         </aside>
         </div>
-        <footer>
-          <ul class="footer-link-ul">
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">联系我们</a></li>
-            <li><a href="#">合作招商</a></li>
-            <li><a href="#">友情链接</a></li>
-            <li><a href="#">隐私政策</a></li>
-          </ul>
-          <p>版权所有 &copy; 2017-2018 淘书网 保留所有权利 地址：南京市龙蟠路159号</p>
-        </footer>
+        <%- include("./footer.ejs")%>
       </div>
     </div>
   </body>
   <script src="/js/setCookie.js"></script>
   <script src="/js/sha256.js"></script>
-  <script src="/js/index.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/global.js"></script>
   <% if(user == ''){ %>
-    <script src="/js/index-add.js"></script>
+    <script src="/js/index.js"></script>
   <% } %>
 </html>

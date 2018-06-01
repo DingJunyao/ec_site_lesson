@@ -4,12 +4,12 @@ var router = express.Router();
 
 router.get('/type/:type', function(req, res, next) {
   pool.getConnection(function(err, connection){
-    connection.query('SELECT * FROM tblbook WHERE fldType = ?', req.params.type, function(err, rows) {
+    connection.query('SELECT * FROM tblbook WHERE fldType = ?;SELECT fldType FROM tblbooktype WHERE fldId = ?;', [req.params.type, req.params.type], function(err, rows) {
       if(err){
          res.end("1");
       } else {
-        if(rows[0] !== undefined) {
-          res.render('list', {title: '书籍列表', search: '', rows: rows});
+        if(rows[0][0] !== undefined && rows[1][0] !== undefined) {
+          res.render('list', {title: '类别为“' + rows[1][0].fldType + '”的书籍列表', search: '', rows: rows[0]});
         } else {
           res.render('list', {title: '书籍列表', search: '', rows: ''});
         }
