@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>书籍列表 - 淘书网</title>
+    <title><%= title %> - 淘书网</title>
     <link rel="stylesheet" href="/stylesheets/global.css">
     <link rel="stylesheet" href="/stylesheets/list.css">
   </head>
@@ -18,8 +18,8 @@
           </div>
           <div class="search">
             <form class="search-form" action="index.html" method="post">
-              <input type="search" name="search-book" value="<%= search %>">
-              <button type="button" name="search-button">查询</button>
+              <input type="search" name="search-book" id="search-book" value="<%= search %>">
+              <button type="button" name="search-button" id="search-button">查询</button>
             </form>
           </div>
           <div class="cart">
@@ -64,5 +64,5 @@
       </div>
     </div>
   </body>
-  <script src="/js/index.js"></script>
+  <script src="/js/search.js"></script>
 </html>
