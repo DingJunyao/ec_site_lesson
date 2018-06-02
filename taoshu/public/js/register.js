@@ -18,7 +18,7 @@ document.getElementById("register").onclick = function() {
       alert('两次密码输入不一致！');
       return;
   }
-  if(!phoneReg.test(document.getElementById('phone').value) && !passReg.test(document.getElementById('password').value)){
+  if(!phoneReg.test(document.getElementById('phone').value) || !passReg.test(document.getElementById('password').value)){
     alert('输入的手机号和/或密码不合要求！');
     return;
   }
