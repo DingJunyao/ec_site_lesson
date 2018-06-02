@@ -16,7 +16,7 @@
               <div class="content-img"><img src="/images/<%= book.fldPicture %>" alt="<%= book.fldBName %>"></div>
               <div class="content-detail">
                 <div class="detail-text">
-                  <h1><%= book.fldBName %></h1>
+                  <h1><a href="/detail/<%= book.fldID %>"><%= book.fldBName %></a></h1>
                   <p class="price">￥<%= book.fldPrice %></p>
                   <p class="author">[<%= book.fldAuthorCountry %>] <a href="/list/author/<%= book.fldAuthor %>"><%= book.fldAuthor %></a> /<%= book.fldDate %>/ <a href="/list/press/<%= book.fldPress %>"><%= book.fldPress %></a></p>
                   <p class="desp"><%= book.fldDescription %></p>

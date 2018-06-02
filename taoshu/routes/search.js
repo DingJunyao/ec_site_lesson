@@ -7,7 +7,7 @@ router.get('/:search', function(req, res, next) {
   pool.getConnection(function(err, connection){
     connection.query('SELECT * FROM tblbook WHERE fldBName LIKE(?) OR fldAuthor LIKE(?) OR fldPress LIKE(?);', like, function(err, rows) {
       if(err){
-         res.end("1");
+         res.render('list', {title: '出错', search: req.params.search, rows: ''});
       } else {
         if(rows[0] !== undefined) {
           res.render('list', {title: '“' + req.params.search + '”的搜索结果', search: req.params.search, rows: rows});

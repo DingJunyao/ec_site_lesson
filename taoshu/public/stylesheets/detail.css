@@ -1,4 +1,96 @@
 .func-area {
+  padding: 29px 117px 0;
+  display: flex;
   border-top: 1px solid white;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.book-img {
+  flex: 0 0 283px;
+  height: 358px;
+}
+.book-img > img {
+  width: 100%;
+  height: 100%;
+}
+.book-desp {
+  margin-left: 25px;
+  flex: 1;
+}
+.book-name {
+  margin: 3px 0;
+  padding-bottom: 11px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: blue;
+  border-bottom: 2px solid #d4d4d4;
+}
+.book-desp p {
+  margin:12px 0;
+  font-size: 0.9rem;
+}
+.book-desp a {
+  color: blue;
+}
+.content-title {
+  display: inline-block;
+  width: 63px;
+  text-align: justify;
+  text-align-last: justify;
+}
+.content-title:after {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  display: none;
+  overflow: hidden;
+  content: '';
+}
+.price-num {
+  color: red;
+  font-size: 1.2rem;
+}
+.price {
+  margin:-6px 0 -2px 0 !important;
+}
+.desp-content {
+  margin-top: -7px !important;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed white;
+}
+.to, .service {
+  margin: 9px 0 !important;
+}
+.to input {
+  width: 200px;
+}
+.storage {
+  font-weight: bold;
+}
+.operation-area {
+  margin: 36px 0;
+}
+.buy-quantity {
+  width: 24px;
+  font-size: 0.95rem;
+  height: 1.7rem;
+  padding: 0 18px;
+  margin-right: 11px;
+}
+.operation-area > button {
+  height: 1.7rem;
+  margin: 0 12px;
+  width: 120px;
+  font-size: 0.98rem;
+  border-radius: 6px;
+  border: none;
+  color: white;
+}
+.add-to-cart, .buy {
+  background-color: red;
+}
+.buy-ebook {
+  background-color: #6595e9;
 }
