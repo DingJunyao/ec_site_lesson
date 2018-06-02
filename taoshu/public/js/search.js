@@ -3,5 +3,5 @@ document.querySelector('form').addEventListener('submit',function(e){
 },false);
 
 document.getElementById('search-button').onclick = function(){
-  window.location.assign("/search/" + encodeURIComponent(document.getElementById('search-book').value));
+  window.location.assign('/search/' + encodeURIComponent(document.getElementById('search-book').value));
 }

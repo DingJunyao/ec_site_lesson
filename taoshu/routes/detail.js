@@ -1,5 +1,6 @@
 var express = require('express');
-var pool = require('./mysql_pool')
+var pool = require('./mysql_pool');
+var moment = require('moment');
 var router = express.Router();
 
 /* GET users listing. */
@@ -14,6 +15,7 @@ router.get('/:bookid', function(req, res, next) {
          res.render('detail', {title: '出错', search: '', book: ''});
       } else {
         if(rows[0] !== undefined) {
+          rows[0].fldDate = moment(rows[0].fldDate).format('YYYY-MM-DD');
           res.render('detail', {title: '《' + rows[0].fldBName + '》的详细信息', search: '', book: rows[0]});
         } else {
           res.render('detail', {title: '该书籍不存在', search: '', book: ''});
