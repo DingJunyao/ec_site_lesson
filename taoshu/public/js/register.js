@@ -12,8 +12,8 @@ document.getElementById("accept").onchange = function() {
   }
 };
 document.getElementById("register").onclick = function() {
-  phoneReg = /^1[0-9]{10}$/;
-  passReg = /^[A-Za-z0-9]{6,12}$/;
+  var phoneReg = /^1[0-9]{10}$/;
+  var passReg = /^[A-Za-z0-9]{6,12}$/;
   if(document.getElementById("password").value !== document.getElementById("confirm").value){
       alert('两次密码输入不一致！');
       return;
@@ -27,9 +27,9 @@ document.getElementById("register").onclick = function() {
       if(e.target.readyState === XMLHttpRequest.DONE && e.target.status === 200) {
           switch (httpRequest.responseText) {
               case "0":
-                  setCookie("taoshu_user", document.getElementById('phone').value, 1)
-                  setCookie("taoshu_token", SHA256(document.getElementById('phone').value+";"+document.getElementById('password').value), 1)
-                  window.location.assign("/")
+                  setCookie("taoshu_user", document.getElementById('phone').value, 1);
+                  setCookie("taoshu_token", SHA256(document.getElementById('phone').value+";"+document.getElementById('password').value), 1);
+                  window.location.assign("/");
                   break;
               case "1":
                   alert("该用户已被注册！");
@@ -39,7 +39,7 @@ document.getElementById("register").onclick = function() {
           }
       }
   };
-  httpRequest.open("POST", "/api/register", true)
+  httpRequest.open("POST", "/api/register", true);
   httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   httpRequest.send("phone="+document.getElementById('phone').value+"&password="+document.getElementById('password').value);
 };

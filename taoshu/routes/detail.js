@@ -19,6 +19,6 @@ router.get('/:bookid', function(req, res, next) {
       connection.release();
     });
   });
-})
+});
 
 module.exports = router;
