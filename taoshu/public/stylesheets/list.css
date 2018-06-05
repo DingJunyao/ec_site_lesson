@@ -44,6 +44,8 @@
 }
 .desp {
   margin: 0;
+  height: 4rem;
+  overflow: hidden;
 }
 .func-button > button {
   height: 1.5rem;

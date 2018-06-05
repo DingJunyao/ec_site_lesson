@@ -16,7 +16,7 @@
             <img src="/images/<%= book.fldPicture %>" alt="<%= book.fldBName %>">
           </div>
           <div class="book-desp">
-            <h1 class="book-name"><%= book.fldBName %></h1>
+            <h1 class="book-name"><a href="/detail/<%= book.fldID %>"><%= book.fldBName %></a></h1>
             <p class="author"><span class="content-title">作者</span>：[<%= book.fldAuthorCountry %>] <a href="/list/author/<%= book.fldAuthor %>"><%= book.fldAuthor %></a></p>
             <p class="press"><span class="content-title">出版社</span>：<a href="/list/press/<%= book.fldPress %>"><%= book.fldPress %></a> <span class="content-title">出版时间</span>：<%= book.fldDate %></p>
             <p class="price"><span class="content-title">淘书网价</span>：<span class="price-num">￥<%= book.fldPrice %></span></p>
