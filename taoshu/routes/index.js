@@ -3,7 +3,6 @@ var pool = require('./mysql_pool');
 var crypto = require('crypto');
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   pool.getConnection(function(err, connection){
     connection.query('SELECT fldPassword FROM tbluser WHERE fldName = ?', req.cookies.taoshu_user, function(err, rows) {

@@ -3,11 +3,6 @@ var pool = require('./mysql_pool');
 var moment = require('moment');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('detail', {search: '', rows: ''});
-});
-
 router.get('/:bookid', function(req, res, next) {
   pool.getConnection(function(err, connection){
     connection.query('SELECT * FROM tblbook WHERE fldID = ?', req.params.bookid, function(err, rows) {
